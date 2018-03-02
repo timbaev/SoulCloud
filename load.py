@@ -11,7 +11,7 @@ from gensim.utils import to_unicode
 
 def get_doc_list(folder_name):
     doc_list = []
-    file_list = [folder_name + '/' + name for name in os.listdir(folder_name) if name.endswith('txt')]
+    file_list = [folder_name + '\\' + name for name in os.listdir(folder_name) if name.endswith('txt')]
     for file in file_list:
         st = codecs.open(file, 'r', 'utf-8').read()
         doc_list.append(st)
@@ -55,7 +55,7 @@ def get_doc(folder_name):
         length_tokens = [i for i in stemmed_tokens if len(i) > 1]
         texts.append(length_tokens)
 
-        td = TaggedDocument(to_unicode(str.encode(' '.join(stemmed_tokens))).split(), doc_name_list[index])
+        td = TaggedDocument(to_unicode(str.encode(' '.join(stemmed_tokens))).split(), str(index))
         tagged_doc.append(td)
 
     return tagged_doc
