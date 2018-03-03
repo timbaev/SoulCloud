@@ -5,8 +5,8 @@ from nltk.stem.porter import PorterStemmer
 from gensim.models.doc2vec import TaggedDocument
 from gensim.utils import to_unicode
 
-def tokenize(doc_list, doc_name_list):
 
+def tokenize(doc_list, doc_name_list):
     tokenizer = RegexpTokenizer(r'\w+')
     ru_stop = stopwords.words('russian')
     ru_stop.extend(['что', 'это', 'так', 'вот', 'быть', 'как', 'в', '—', 'к', 'на'])

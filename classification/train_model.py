@@ -1,7 +1,7 @@
 from gensim.models import Doc2Vec
 
-def train_model_for_user_books(documents) -> Doc2Vec:
 
+def train_model_for_user_books(documents) -> Doc2Vec:
     model = Doc2Vec(documents, dm=0, alpha=0.025, size=20, min_alpha=0.025, min_count=0)
 
     for epoch in range(2):

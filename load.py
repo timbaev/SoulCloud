@@ -30,7 +30,6 @@ def get_doc_names(folder_name):
 
 def get_doc(folder_name):
     doc_list = get_doc_list(folder_name)
-    doc_name_list = get_doc_names(folder_name)
 
     # или : tagged_doc = tokenization.tokenize(doc_list, doc_name_list)
 
